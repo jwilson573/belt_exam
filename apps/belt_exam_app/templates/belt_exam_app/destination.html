@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <a href='/travels/add'><h2>Add Travel Plan</h2></a>
+        <a href='/logout'>Logout</a>
+        <h2>{{current_trip.destination}}</h2>
+
+        <p>Planned by: {{current_trip.owner.name}}</p>
+        <p>Description: {{current_trip.description}}</p>
+        <p>Description: {{current_trip.start_date}}</p>
+        <p>Description: {{current_trip.end_date}}</p>
+
+
+
+        <h2>Other users joining the trip:</h2>
+        {% for i in other_users %}
+            {{i.name}}
+
+        {% endfor %}
+
+    </body>
+</html>

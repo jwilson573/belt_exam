@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <a href='/travels'><h2>Home</h2></a>
+        <a href='/logout'>Logout</a>
+        <h1>Add a Trip</h1>
+
+        <form action='/create_trip' method='post'>
+        {% csrf_token %}
+            <label>Destination:</label>
+            <input type='text', name='destination'>
+
+            <label>Description:</label>
+            <input type='text', name='description'>
+
+            <label>Travel Date From:</label>
+            <input type='text', name='date_from'>
+
+            <label>Travel Date To:</label>
+            <input type='text', name='date_to'>
+
+            <input type='submit' value='Add'>
+        </form>
+
+            
+        
+    </body>
+</html>
